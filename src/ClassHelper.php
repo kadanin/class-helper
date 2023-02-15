@@ -39,7 +39,7 @@ class ClassHelper
      *
      * @return bool
      */
-    public static function isClassName(string $className = null, bool $nullReturnsResult = false): bool
+    public static function isClassName(?string $className, bool $nullReturnsResult = false): bool
     {
         if (null === $className) {
             return $nullReturnsResult;

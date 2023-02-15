@@ -11,7 +11,7 @@ use tests\classes\TestSubClass;
 
 class MainTest extends TestCase
 {
-    public function testIsClassName()
+    public function testIsClassName(): void
     {
         static::assertTrue(ClassHelper::isClassName(TestClass::class));
         static::assertFalse(ClassHelper::isClassName('ass we can'));
@@ -19,7 +19,7 @@ class MainTest extends TestCase
         static::assertFalse(ClassHelper::isClassName(null));
     }
 
-    public function testIsSubclassOf()
+    public function testIsSubclassOf(): void
     {
         static::assertTrue(ClassHelper::isSubclassOf(new TestClass(), new TestClass()));
         static::assertTrue(ClassHelper::isSubclassOf(new TestClass(), TestClass::class));
