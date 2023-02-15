@@ -1,9 +1,7 @@
 version: '3.6'
 services:
   php:
-    image: php:5.6-cli-alpine
-    #stdin_open: true
-    #tty: true
+    image: php:7.0-cli-alpine
     working_dir: /app
     command: sh -c "php vendor/bin/phpunit"
     volumes:

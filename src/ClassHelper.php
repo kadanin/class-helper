@@ -18,7 +18,7 @@ class ClassHelper
      *
      * @return bool
      */
-    public static function isSubclassOf($object, $className, $nullReturnsResult = false)
+    public static function isSubclassOf($object, $className, bool $nullReturnsResult = false): bool
     {
         if (null === $object) {
             return $nullReturnsResult;
@@ -39,7 +39,7 @@ class ClassHelper
      *
      * @return bool
      */
-    public static function isClassName($className, $nullReturnsResult = false)
+    public static function isClassName(string $className = null, bool $nullReturnsResult = false): bool
     {
         if (null === $className) {
             return $nullReturnsResult;
